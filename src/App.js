@@ -1,11 +1,11 @@
 import React from 'react';
 import CustomerRewards from './components/CustomerRewards';
-import './App.css';
 
-const App = () => {
+const App = ({ data }) => {
+  const transactions = data?.transactions || [];
   return (
     <div className="App">
-      <CustomerRewards />
+      <CustomerRewards transactions={transactions} />
     </div>
   );
 };
